@@ -5,7 +5,6 @@
 {-# LANGUAGE ExtendedDefaultRules #-}
 import           Yesod
 
--- data Links = Links
 data App = App
 
 mkYesod "App" [parseRoutes|
@@ -13,6 +12,7 @@ mkYesod "App" [parseRoutes|
 /page1 Page1R GET
 /page2 Page2R GET
 /test TestR GET
+/more MoreR GET
 |]
 
 myLayout :: Widget -> Handler Html
@@ -50,5 +50,7 @@ getTestR = return $ object ["msg" .= "Hello World"
                            , "another msg" .= "Keep it moving!!"
                            ]
 
+getMoreR = return $ object ["give" .= "Give me more! I need more!"]
+
 main :: IO ()
-main = warp 3000 App
+main = warp 3000 App 
