@@ -18,3 +18,7 @@ cabal.sandbox.config
 .stack-work/
 cabal.project.local
 .HTF/
+node_modules
+bower_components
+.tmp
+yarn-error.log
