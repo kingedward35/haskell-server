@@ -17,3 +17,6 @@ main = runTest do
       equal (1 + 1) 2
     test "Far Out!" do
       equal (2 + 2) 4
+  suite "Testing things out" do 
+    test "Strings are equal" do 
+      equal ("test" == "test") true
